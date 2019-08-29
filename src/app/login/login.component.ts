@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -10,8 +10,8 @@ export class LoginComponent {
 
   constructor(private formBuilder: FormBuilder) {
     this.loginForm = this.formBuilder.group({
-      username: '',
-      password: ''
+      username: ['', [Validators.required, Validators.email]],
+      password: ['', Validators.required]
     });
   }
 }
