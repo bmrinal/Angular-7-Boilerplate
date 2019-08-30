@@ -5,7 +5,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
   MatCardModule,
   MatInputModule,
-  MatButtonModule
+  MatButtonModule,
+  MatIconModule,
+  MatSnackBarModule
 } from '@angular/material/';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -21,6 +23,8 @@ import { LoginComponent } from './login/login.component';
     MatCardModule,
     MatInputModule,
     MatButtonModule,
+    MatIconModule,
+    MatSnackBarModule,
     FormsModule,
     ReactiveFormsModule
   ],
