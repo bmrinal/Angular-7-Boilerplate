@@ -14,8 +14,8 @@ export class LoginComponent {
 
   constructor(
     private formBuilder: FormBuilder,
-    snackBar: MatSnackBar,
-    user: UserService
+    private snackBar: MatSnackBar,
+    private user: UserService
   ) {
     this.loginForm = this.formBuilder.group({
       username: ['', [Validators.required, Validators.email]],
@@ -23,8 +23,12 @@ export class LoginComponent {
     });
     this.onSubmit = () => {
       if (this.loginForm.status === 'VALID') {
+        const username = this.loginForm.get('username').value;
+        const password = this.loginForm.get('password').value;
+        console.log(this.user.login(username, password));
+
         // hit login API here
-        snackBar.open('Invalid Credentials!', 'Dismiss');
+        this.snackBar.open('Invalid Credentials!', 'Dismiss');
       }
     };
   }
