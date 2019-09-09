@@ -25,7 +25,7 @@ export class LoginComponent {
       if (this.loginForm.status === 'VALID') {
         const username = this.loginForm.get('username').value;
         const password = this.loginForm.get('password').value;
-        console.log(this.user.login(username, password));
+        this.user.login(username, password);
 
         // hit login API here
         this.snackBar.open('Invalid Credentials!', 'Dismiss');

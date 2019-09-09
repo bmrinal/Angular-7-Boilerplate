@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import config from '../config.js';
 
 @Injectable({
   providedIn: 'root'
@@ -7,5 +8,14 @@ import { HttpClient } from '@angular/common/http';
 export class UserService {
   constructor(private http: HttpClient) {}
 
-  login(username, password) {}
+  async login(username, password) {
+    this.http
+      .post(config.apiBase + '/signin', {
+        username,
+        password
+      })
+      .subscribe({
+        next: user => {}
+      });
+  }
 }
