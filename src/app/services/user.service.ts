@@ -10,7 +10,7 @@ export class UserService {
 
   async login(username, password) {
     this.http
-      .post(config.apiBase + '/signin', {
+      .post(config.apiBase + '/user/signin', {
         username,
         password
       })
