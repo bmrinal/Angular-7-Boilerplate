@@ -6,7 +6,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## What's in it
 
-- A material based UI. 
+- A material based UI - implemented with https://material.angular.io
 - Login Screen. 
 - Frontend Validations. 
 - A ready to use Angular 7 boilerplate.
